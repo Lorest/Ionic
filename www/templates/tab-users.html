@@ -1,0 +1,13 @@
+<ion-view title="Obcheck">
+  <div class="bar bar-subheader" ng-show="subOn"><h2>Users :</h2></div>
+  <ion-content has-header="true">
+  <h2 ng-show="loading">Chargement ...</h2>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="user in users" type="item-text-wrap" href="#/tab/users/{{user.idUser}}">
+        <img ng-src="{{user.avatar}}">
+        <h2>Prénom : {{user.name}}</h2>
+        <h2>Nom : {{user.lastname}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

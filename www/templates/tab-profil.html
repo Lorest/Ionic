@@ -1,0 +1,60 @@
+<ion-view title="Obcheck">
+  <div class="bar bar-subheader" ng-show="subOn"><h2>User :</h2></div>
+  <ion-content has-header="true" padding="true">
+  <h2 ng-show="loading">Chargement ...</h2>
+
+    <img ng-src="{{user.avatar}}">
+    
+    <ion-list ng-hide="update">
+      <ion-item ng-hide="update">
+        <p>Prénom : {{user.name}}</p>
+      </ion-item>
+      <ion-item ng-hide="update">
+        <p>Nom : {{user.lastname}}</p>
+      </ion-item>
+      <ion-item ng-hide="update">
+        <p>Age : {{user.age}}</p>
+      </ion-item>
+      <ion-item ng-hide="update">
+        <p>Adresse : {{user.adress}}</p>
+      </ion-item>
+      <ion-item ng-hide="update">
+        <p>Téléphone : {{user.phone}}</p>
+      </ion-item>
+    </ion-list>
+
+  <button ng-hide="update" ng-click="see(user.position.lat,user.position.lng)" class="button icon ion-android-compass xxlarge"></button>
+   <button ng-hide="update" ng-click="update = true" class="button icon ion-edit xxlarge"></button>
+
+  <form ng-submit="post(user)">
+    <ion-list ng-show="update">
+        <!-- <label class="item item-input">
+          <span class="input-label">Prénom :</span>
+          <input type="text" ng-model="user.name">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Nom :</span>
+          <input type="text" ng-model="user.lastname"> -->
+        </label>
+      <label class="item item-input">
+        <span class="input-label">Age :</span>
+        <input type="number" ng-model="user.age">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Adresse :</span>
+        <input type="text"  ng-model="user.adress">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Téléphone :</span>
+        <input type="tel" ng-model="user.phone">
+      </label>
+    </ion-list>
+   <button ng-show="update" type="submit" class="button icon ion-checkmark-circled xxlarge"></button>
+   <button ng-show="update" ng-click="update = false" class="button icon ion-close-circled xxlarge"></button>
+  </form>
+  <!--  <hr>
+   <br>
+
+   <ion-toggle  ng-model="update">Modifier mes infos :</ion-toggle> -->
+  </ion-content>
+</ion-view>

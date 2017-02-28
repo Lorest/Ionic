@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+.scroll-content {
+	background-image: url('/img/logo_transp.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: #eee;
+
+}
+
+.xlarge{
+	width: 25%;
+	margin-left: 5%;
+	margin-top: 10%;
+}
+
+.xxlarge{
+	width: 40%;
+	margin-left: 5%;
+	margin-top: 10%; 
+}
+
+.xxxlarge{
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 5%; 
+}
+
+
+
+.angular-google-map-container { height: 70vh; }
